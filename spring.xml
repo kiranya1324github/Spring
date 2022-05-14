@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"> 
+    
+    
+    <!-- create object of heart and human -->
+    <bean id="heartobj" class="com.edu.Heart"><!-- id and instance variable in human should be same -->
+    
+   </bean>
+    
+    <bean id="humanobj" class="com.edu.Human"  autowire="constructor">
+    
+    
+    <property name="heart" ref="heartobj"></property>
+    </bean>
+    
+    
+    </beans>
